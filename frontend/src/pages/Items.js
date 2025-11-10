@@ -14,6 +14,7 @@ import {
     Alert,
 } from '@mui/material';
 import AddItemDialog from "../components/AddItemDialog";
+import StatsSummary from "../components/StatsSummary";
 
 const LIST_HEIGHT = 400;
 const ROW_HEIGHT = 56;
@@ -82,6 +83,7 @@ function Items() {
             <Typography variant="h4" gutterBottom>
                 Items
             </Typography>
+            <StatsSummary />
             <Stack
                 direction={{xs: 'column', sm: 'row'}}
                 spacing={2}
