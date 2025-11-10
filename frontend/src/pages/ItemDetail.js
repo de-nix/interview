@@ -64,6 +64,7 @@ function ItemDetail() {
         return () => controller.abort();
     }, [id]);
 
+    // When load fails, show a clean inline alert instead of silent blank page
     return (
         <Box sx={{p: 2, maxWidth: 800, mx: 'auto'}}>
             <Stack direction="row" spacing={1} sx={{mb: 2}}>
@@ -85,7 +86,6 @@ function ItemDetail() {
                 </Alert>
             )}
 
-            // When load fails, show a clean inline alert instead of silent blank page
             {!loading && error?.type === 'error' && (
                 <Alert severity="error" sx={{mb: 2}}>
                     {error.message}
